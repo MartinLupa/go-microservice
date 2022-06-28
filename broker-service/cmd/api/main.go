@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-const webPort = "8080"
+const webPort = "3001"
 
 type Config struct {
 }
@@ -19,7 +19,7 @@ func main() {
 	//define http server
 	srv := &http.Server{
 		Addr:    fmt.Sprintf(":%s", webPort),
-		Handler: app.routes(),
+		Handler: app.Routes(),
 	}
 
 	//start server
